@@ -1,7 +1,7 @@
 // Copyright (c) 2023 Val I All rights reserved.
 //
 // Created by: Val
-// Created on: Nov 1, 2023
+// Created on: Nov 25, 2023
 // This program asks the user to enter two or three numbers,
 // it then tells them the greatest common factor.
 #include <iostream>
@@ -21,7 +21,7 @@ int main() {
 
     // Uses loop to get the amount of numbers from the user.
     while (numAmount != "2" && numAmount != "3") {
-        std::cout << "Enter numAmount: ";
+        std::cout << " ";
         std::cin >> numAmount;
         if (numAmount != "2" && numAmount != "3") {
             std::cout << "Please enter 2 or 3!\n";
@@ -63,7 +63,7 @@ int main() {
                     // Displays the greatest common factor.
                     std::cout << "The greatest common factor is " << gcf << ".\n";
                 } catch (std::invalid_argument) {
-                    std::cout << numStr3 << " is not a number.\n";
+                    std::cout << numStr3 << " is not an integer.\n";
                 }
             } else {
                 // Uses loop to calculate the greatest common factor.
@@ -78,9 +78,9 @@ int main() {
                 std::cout << "The greatest common factor is " << gcf << ".\n";
             }
         } catch (std::invalid_argument) {
-            std::cout << numStr2 << " is not a number.\n";
+            std::cout << numStr2 << " is not an integer.\n";
         }
     } catch (std::invalid_argument) {
-        std::cout << numStr1 << " is not a number.\n";
+        std::cout << numStr1 << " is not an integer.\n";
     }
 }
